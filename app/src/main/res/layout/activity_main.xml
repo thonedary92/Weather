@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tvTemparature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20'C"
+        android:textSize="64sp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/weatherStatus"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/tvTemparature"
+        android:src="@drawable/ic_launcher_background"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/edtCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/btnSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Yangon"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:text="Search"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Error Message"
+        android:visibility="gone"/>
+    
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_below="@id/tvError"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
